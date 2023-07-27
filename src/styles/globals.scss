@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+.fancy {
+	font-family: 'Caveat', cursive;
+}
+
+h1,
+.title {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 1em;
+}
+
+button {
+	padding: 0.7rem 2rem;
+}
