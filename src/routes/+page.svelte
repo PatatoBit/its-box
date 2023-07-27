@@ -1,10 +1,9 @@
 <script lang="ts">
+	import Landing from '$lib/components/Landing.svelte';
 	import { auth, db } from '../lib/firebase';
 	import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 	import { onMount } from 'svelte';
 	import { userStore } from 'sveltefire';
-
-	const provider = new GoogleAuthProvider();
 
 	let isUser: boolean = false;
 	onMount(() => {
@@ -21,16 +20,6 @@
 		});
 	});
 
-	const googleLogin = () => {
-		signInWithPopup(auth, provider)
-			.then((result) => {
-				console.log(result);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
-	};
-
 	const logOut = () => {
 		auth.signOut().then(
 			() => {
@@ -44,21 +33,17 @@
 </script>
 
 <main>
-	<h1 class="fancy title">ITS Box</h1>
+	{#if isUser == false}
+		<!-- content here -->
+		<Landing />
+	{:else}
+		<!-- The actual page -->
 
-	<div>
-		{#if isUser == false}
-			<!-- content here -->
-			<button on:click={googleLogin}>Login</button>
-		{:else}
-			<p>Logged in as {auth.currentUser?.displayName}</p>
-			<p>{auth.currentUser?.email}</p>
-			<button on:click={logOut}>Logout</button>
-			<!-- else content here -->
-		{/if}
-
-		<button>Learn more</button>
-	</div>
+		<p>Logged in as {auth.currentUser?.displayName}</p>
+		<p>{auth.currentUser?.email}</p>
+		<button on:click={logOut}>Logout</button>
+		<!-- else content here -->
+	{/if}
 </main>
 
 <style lang="scss">
