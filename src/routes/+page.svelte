@@ -1,9 +1,8 @@
 <script lang="ts">
 	import Landing from '$lib/components/Landing.svelte';
-	import { auth, db } from '../lib/firebase';
-	import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
+	import { auth } from '../lib/firebase';
 	import { onMount } from 'svelte';
-	import { userStore } from 'sveltefire';
+	import Ideas from '$lib/components/Ideas.svelte';
 
 	let isUser: boolean = false;
 	onMount(() => {
@@ -19,43 +18,14 @@
 			}
 		});
 	});
-
-	const logOut = () => {
-		auth.signOut().then(
-			() => {
-				console.log('The user is signed out');
-			},
-			(error) => {
-				console.log(error);
-			}
-		);
-	};
 </script>
 
-<main>
-	{#if isUser == false}
-		<!-- content here -->
-		<Landing />
-	{:else}
-		<!-- The actual page -->
+{#if isUser == false}
+	<!-- content here -->
+	<Landing />
+{:else}
+	<!-- The actual page -->
+	<Ideas />
 
-		<p>Logged in as {auth.currentUser?.displayName}</p>
-		<p>{auth.currentUser?.email}</p>
-		<button on:click={logOut}>Logout</button>
-		<!-- else content here -->
-	{/if}
-</main>
-
-<style lang="scss">
-	main {
-		display: flex;
-		flex-direction: column;
-
-		align-items: center;
-		justify-content: center;
-
-		max-width: 60rem;
-		height: 100vh;
-		margin-inline: auto;
-	}
-</style>
+	<!-- else content here -->
+{/if}

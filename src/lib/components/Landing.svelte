@@ -19,3 +19,13 @@
 	<h1 class="fancy title">ITS Box</h1>
 	<button on:click={googleLogin}>Login</button>
 </main>
+
+<style lang="scss">
+	main {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
