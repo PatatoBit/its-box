@@ -20,11 +20,8 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="card">
-	<div on:click={() => (showModal = true)}>
+	<div class="card-text" on:click={() => (showModal = true)}>
 		<h3>{title}</h3>
-	</div>
-
-	<div class="para" on:click={() => (showModal = true)}>
 		<p class="lineclamp">{description}</p>
 	</div>
 
@@ -48,10 +45,17 @@
 		border-radius: 0.75rem;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		gap: 0.2rem;
 		overflow: hidden;
 		flex: 1;
 		cursor: pointer;
+
+		.card-text {
+			display: flex;
+			flex-direction: column;
+			gap: 0.35rem;
+		}
 
 		.upvote-btn {
 			display: flex;
@@ -70,19 +74,11 @@
 			transition-duration: 0.2s;
 			transform: scale(1.14) !important;
 		}
-
-		div {
-			flex: 1;
-		}
-
-		div.para {
-			flex: 2;
-		}
 	}
 
 	.lineclamp {
 		display: -webkit-box;
-		-webkit-line-clamp: 3;
+		-webkit-line-clamp: 4;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
