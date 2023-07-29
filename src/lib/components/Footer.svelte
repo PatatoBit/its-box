@@ -8,7 +8,7 @@
 				</p>
 			</div>
 			<div>
-				<p>Made by <a href="https://bento.me/patato">Patato</a></p>
+				<p>Made with 😿 by <a href="https://bento.me/patato">Patato</a></p>
 			</div>
 
 			<div>

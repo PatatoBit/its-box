@@ -10,7 +10,7 @@
 	<br />
 
 	<p>
-		If you have any questions or feedback, feel free to email me at <a
+		If you have any questions or feedbacks, feel free to email me at <a
 			href="mailto:patatobit@gmail.com">patatobit@gmail.com</a
 		>.
 	</p>
