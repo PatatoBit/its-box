@@ -35,7 +35,7 @@
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div class="form" on:click|stopPropagation>
 		<h2>Suggest an idea</h2>
-		<input bind:value={title} type="text" placeholder="Name of your idea" />
+		<input bind:value={title} type="text" placeholder="Name of your idea" required />
 		<textarea
 			bind:value={description}
 			name="description"
@@ -43,6 +43,8 @@
 			cols="30"
 			rows="10"
 			style="resize: none"
+			required
+			placeholder="A short description of your idea"
 		/>
 
 		<div>
@@ -62,6 +64,12 @@
 		padding: 1rem;
 
 		input {
+			padding: 0.5rem;
+			border-radius: 0.25rem;
+			border: 1px solid #a3a3a3;
+		}
+
+		textarea {
 			padding: 0.5rem;
 			border-radius: 0.25rem;
 			border: 1px solid #a3a3a3;

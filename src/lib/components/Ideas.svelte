@@ -39,7 +39,7 @@
 
 <div class="wrapper">
 	<div class="nav">
-		<button on:click={logOut}>Logout</button>
+		<button class="secondary" on:click={logOut}>Logout</button>
 		<button on:click={() => (showModal = true)}>Suggest</button>
 	</div>
 

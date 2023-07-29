@@ -19,6 +19,24 @@ h1,
 
 button {
 	padding: 0.7rem 2rem;
+
+	border: none;
+
+	background-color: #ff8b15;
+
+	color: white;
+
+	font-weight: 700;
+
+	&:hover {
+		transition-duration: 0.2s;
+		opacity: 0.8;
+		scale: 1.05;
+	}
+}
+.secondary {
+	background-color: #f3dec9;
+	color: black;
 }
 
 .wrapper {
