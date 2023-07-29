@@ -16,7 +16,8 @@
 		const docRef = await addDoc(collection(db, 'ideas'), {
 			title,
 			description,
-			anonymous
+			anonymous,
+			upvote: 0
 		});
 
 		console.log('Document written with ID: ', docRef.id);
@@ -66,7 +67,7 @@
 		input {
 			padding: 0.5rem;
 			border-radius: 0.25rem;
-			border: 1px solid #a3a3a3;
+			order: 1px solid #a3a3a3;
 		}
 
 		textarea {

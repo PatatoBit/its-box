@@ -19,6 +19,7 @@
 	interface Idea {
 		title: string;
 		description: string;
+		upvote: number;
 	}
 
 	let ideas: Idea[] = [];
@@ -47,7 +48,7 @@
 
 	<div class="cards">
 		{#each ideas as idea}
-			<Card title={idea.title} description={idea.description} />
+			<Card title={idea.title} description={idea.description} upvote={idea.upvote} />
 		{/each}
 	</div>
 </div>
