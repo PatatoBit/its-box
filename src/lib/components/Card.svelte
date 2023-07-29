@@ -5,7 +5,7 @@
 
 <div class="card">
 	<h3>{title}</h3>
-	<p>{description}</p>
+	<p class="lineclamp">{description}</p>
 </div>
 
 <style lang="scss">
@@ -27,5 +27,12 @@
 			transition-duration: 0.2s;
 			transform: rotate(1deg) scale(1.14) !important;
 		}
+	}
+
+	.lineclamp {
+		display: -webkit-box;
+		-webkit-line-clamp: 5;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 </style>

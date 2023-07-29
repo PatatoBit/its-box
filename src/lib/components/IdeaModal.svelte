@@ -22,7 +22,7 @@
 		console.log('Document written with ID: ', docRef.id);
 		title = '';
 		description = '';
-		anonymous = false;
+		anonymous = true;
 		dialog.close();
 	};
 </script>
