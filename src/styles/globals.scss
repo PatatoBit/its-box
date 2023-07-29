@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=IBM+Plex+Sans+Thai+Looped:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap');
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -19,18 +24,13 @@ h1,
 
 button {
 	padding: 0.7rem 2rem;
-
 	border: none;
-
 	border-radius: 6px;
-
 	background-color: #ff8b15;
-
 	color: white;
-
 	font-weight: 700;
-
 	font-size: 18px;
+	cursor: pointer;
 
 	&:hover {
 		transition-duration: 0.2s;
@@ -42,14 +42,20 @@ button {
 	background-color: #f3dec9;
 	color: black;
 }
+
 .upvote {
 	background: none;
 	border: none;
 	cursor: pointer;
 	border: 1px solid #72420e;
+
 	border-radius: 100%;
 	aspect-ratio: 1/1;
 	padding: 0.2rem;
+
+	&:hover {
+		background-color: #72420e;
+	}
 }
 
 .wrapper {

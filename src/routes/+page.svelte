@@ -4,6 +4,8 @@
 	import { auth } from '$lib/firebase';
 	import { onMount } from 'svelte';
 
+	import { userStore } from '../store';
+
 	let isUser: boolean = false;
 	onMount(() => {
 		auth.onAuthStateChanged((user) => {
@@ -11,6 +13,12 @@
 				// The user is signed in.
 				isUser = true;
 				console.log(`The user is signed in as ${user.displayName}`);
+
+				userStore.set({
+					username: user.displayName,
+					email: user.email,
+					uid: user.uid
+				});
 			} else {
 				// The user is not signed in.
 				isUser = false;

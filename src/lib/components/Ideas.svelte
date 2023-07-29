@@ -17,6 +17,7 @@
 	};
 
 	interface Idea {
+		docId: string;
 		title: string;
 		description: string;
 		upvote: number;
@@ -29,9 +30,16 @@
 		const unsubscribe = onSnapshot(q, (querySnapshot) => {
 			ideas = [];
 			querySnapshot.forEach((doc) => {
-				ideas = [...ideas, doc.data() as Idea];
+				ideas = [
+					...ideas,
+					{
+						docId: doc.id,
+						title: doc.data().title,
+						description: doc.data().description,
+						upvote: doc.data().upvote
+					}
+				];
 			});
-			console.log('Current data ', ideas.join(', '));
 		});
 	});
 
@@ -47,8 +55,13 @@
 	<IdeaModal bind:showModal />
 
 	<div class="cards">
-		{#each ideas as idea}
-			<Card title={idea.title} description={idea.description} upvote={idea.upvote} />
+		{#each ideas as idea (idea.docId)}
+			<Card
+				title={idea.title}
+				description={idea.description}
+				upvote={idea.upvote}
+				docId={idea.docId}
+			/>
 		{/each}
 	</div>
 </div>

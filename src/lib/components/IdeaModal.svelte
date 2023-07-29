@@ -17,7 +17,8 @@
 			title,
 			description,
 			anonymous,
-			upvote: 0
+			upvote: 0,
+			upvoters: []
 		});
 
 		console.log('Document written with ID: ', docRef.id);

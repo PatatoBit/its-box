@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { auth } from '$lib/firebase';
+	import { upVote } from '$lib/upvote';
+
 	export let showModal: boolean; // boolean
 
 	let dialog: HTMLDialogElement; // HTMLDialogElement
@@ -8,6 +11,9 @@
 	export let title: string; // string
 	export let description: string;
 	export let upvote: number;
+	export let docId: string;
+
+	export let userId: string;
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
@@ -17,18 +23,26 @@
 	on:click|self={() => dialog.close()}
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation>
+	<div class="modal" on:click|stopPropagation>
 		<h2>{title}</h2>
 		<p>{description}</p>
 
 		<div class="upvote-btn">
 			<label for="upvote">{upvote}</label>
-			<button class="upvote" id="upvote">👍</button>
+			<button on:click={async () => await upVote(docId, userId)} class="upvote" id="upvote"
+				>👍</button
+			>
 		</div>
 	</div>
 </dialog>
 
 <style>
+	.modal {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
 	.upvote-btn {
 		display: flex;
 		flex-direction: row;

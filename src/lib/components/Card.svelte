@@ -1,31 +1,41 @@
 <script lang="ts">
+	import { userStore } from '../../store';
+	import { upVote } from './../upvote';
 	import CardModal from './CardModal.svelte';
 
 	export let title: string;
 	export let description: string;
 	export let upvote: number;
+	export let docId: string;
+
+	let userId: string = '';
 
 	let showModal: boolean = false;
+
+	userStore.subscribe((prev) => (userId = prev.uid));
+
+	console.log(userId);
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="card" on:click={() => (showModal = true)}>
-	<div>
+<div class="card">
+	<div on:click={() => (showModal = true)}>
 		<h3>{title}</h3>
 	</div>
 
-	<div class="para">
+	<div class="para" on:click={() => (showModal = true)}>
 		<p class="lineclamp">{description}</p>
 	</div>
 
 	<div class="upvote-btn">
 		<label for="upvote">{upvote}</label>
-		<button class="upvote" id="upvote">👍</button>
+		<button on:click={async () => await upVote(docId, userId)} class="upvote" id="upvote">👍</button
+		>
 	</div>
 </div>
 
-<CardModal {title} {description} {upvote} bind:showModal />
+<CardModal {title} {description} {upvote} {docId} {userId} bind:showModal />
 
 <style lang="scss">
 	.card {
@@ -51,9 +61,14 @@
 			gap: 0.4rem;
 		}
 
+		.upvote {
+			position: relative;
+			z-index: 1;
+		}
+
 		&:hover {
 			transition-duration: 0.2s;
-			transform: rotate(1deg) scale(1.14) !important;
+			transform: scale(1.14) !important;
 		}
 
 		div {
