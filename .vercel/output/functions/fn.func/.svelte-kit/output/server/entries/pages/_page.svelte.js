@@ -22,7 +22,7 @@ const css = {
 const Landing = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   new GoogleAuthProvider();
   $$result.css.add(css);
-  return `<main class="svelte-1w7casm"><img src="/cox.png" alt="Cat in a box" class="svelte-1w7casm"> <h1 class="fancy title svelte-1w7casm" data-svelte-h="svelte-e6rz1j">ITS Box</h1> <div><button data-svelte-h="svelte-aqtr0f">Login</button> <button class="secondary" data-svelte-h="svelte-1t65v28"><a href="/about" class="svelte-1w7casm">About</a></button></div> </main>`;
+  return `<main class="svelte-1w7casm"><img src="/cox.png" alt="Cat in a box" class="svelte-1w7casm"> <h1 class="fancy title svelte-1w7casm" data-svelte-h="svelte-e6rz1j">ITS Box</h1> <div><button data-svelte-h="svelte-aqtr0f">Login</button> <a href="/about" class="svelte-1w7casm" data-svelte-h="svelte-p8xmqc"><button class="secondary">About</button></a></div> </main>`;
 });
 const CardModal_svelte_svelte_type_style_lang = "";
 const Card_svelte_svelte_type_style_lang = "";
