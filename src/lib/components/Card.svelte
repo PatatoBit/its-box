@@ -48,7 +48,7 @@
 			flex-direction: row;
 			justify-content: flex-end;
 			align-items: center;
-			gap: 0.2rem;
+			gap: 0.4rem;
 		}
 
 		&:hover {
