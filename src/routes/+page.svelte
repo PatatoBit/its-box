@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Landing from '$lib/components/Landing.svelte';
-	import { auth } from '../lib/firebase';
-	import { onMount } from 'svelte';
 	import Ideas from '$lib/components/Ideas.svelte';
+	import { auth } from '$lib/firebase';
+	import { onMount } from 'svelte';
 
 	let isUser: boolean = false;
 	onMount(() => {
@@ -26,6 +26,4 @@
 {:else}
 	<!-- The actual page -->
 	<Ideas />
-
-	<!-- else content here -->
 {/if}

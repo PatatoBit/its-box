@@ -59,9 +59,8 @@
 
 	.cards {
 		gap: 1rem;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 	}
 
 	.nav {
