@@ -3,9 +3,6 @@ import { db } from './firebase';
 
 export const upVote = async (docId: string, userId: string) => {
 	const docRef = doc(db, 'ideas', docId);
-
-	console.log('Upvoted as', userId);
-
 	const docSnap = (await getDoc(docRef)).data();
 
 	if (docSnap && !docSnap.upvoters.includes(userId)) {

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { auth, db } from '$lib/firebase';
 	import { getDocs, collection, onSnapshot } from 'firebase/firestore';
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import Card from './Card.svelte';
 	import IdeaModal from './IdeaModal.svelte';
 
@@ -21,6 +21,7 @@
 		title: string;
 		description: string;
 		upvote: number;
+		upvoters: string[];
 	}
 
 	let ideas: Idea[] = [];
@@ -36,12 +37,17 @@
 						docId: doc.id,
 						title: doc.data().title,
 						description: doc.data().description,
-						upvote: doc.data().upvote
+						upvote: doc.data().upvote,
+						upvoters: doc.data().upvoters
 					}
 				];
 			});
 			ideas.sort(compare);
 		});
+	});
+
+	onDestroy(() => {
+		unsubscribe();
 	});
 
 	let showModal: boolean = false;
@@ -66,6 +72,7 @@
 				description={idea.description}
 				upvote={idea.upvote}
 				docId={idea.docId}
+				upvoters={idea.upvoters}
 			/>
 		{/each}
 	</div>

@@ -1,11 +1,14 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { userStore } from '../../store';
 	import { upVote } from './../upvote';
 	import CardModal from './CardModal.svelte';
+	import { db } from '$lib/firebase';
 
 	export let title: string;
 	export let description: string;
 	export let upvote: number;
+	export let upvoters: string[];
 	export let docId: string;
 
 	let userId: string = '';
@@ -27,7 +30,11 @@
 
 	<div class="upvote-btn">
 		<label for="upvote">{upvote}</label>
-		<button on:click={async () => await upVote(docId, userId)} class="upvote" id="upvote">👍</button
+		<button
+			on:click={async () => await upVote(docId, userId)}
+			class="upvote"
+			class:activated={upvoters.includes(userId)}
+			id="upvote">👍</button
 		>
 	</div>
 </div>
@@ -70,6 +77,9 @@
 		.upvote {
 			position: relative;
 			z-index: 1;
+		}
+		.activated {
+			background-color: #72420e;
 		}
 
 		&:hover {
