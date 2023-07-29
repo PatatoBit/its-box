@@ -41,7 +41,6 @@
 				];
 			});
 			ideas.sort(compare);
-			console.table(ideas);
 		});
 	});
 
@@ -78,6 +77,7 @@
 	}
 
 	.cards {
+		transition: all 0.2s ease-in-out;
 		gap: 1rem;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));

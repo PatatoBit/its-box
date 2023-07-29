@@ -45,7 +45,7 @@
 <style>
 	.modal {
 		max-width: 50rem;
-		min-width: 30rem;
+		min-width: 20rem;
 		height: 30rem;
 
 		justify-content: space-between;

@@ -30,12 +30,15 @@
 	};
 </script>
 
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <dialog
 	bind:this={dialog}
 	on:close={() => (showModal = false)}
 	on:click|self={() => dialog.close()}
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="form" on:click|stopPropagation>
 		<h2>Suggest an idea</h2>
 		<input bind:value={title} type="text" placeholder="Name of your idea" required />
@@ -65,7 +68,7 @@
 		gap: 0.5rem;
 
 		max-width: 50rem;
-		min-width: 30rem;
+		min-width: 20rem;
 		height: 25rem;
 
 		padding: 1rem;
@@ -74,9 +77,16 @@
 			padding: 0.5rem;
 			border-radius: 0.25rem;
 			order: 1px solid #a3a3a3;
+
+			&::placeholder {
+				font-size: 20px;
+			}
 		}
 
 		textarea {
+			&::placeholder {
+				font-size: 16px;
+			}
 			padding: 0.5rem;
 			border-radius: 0.25rem;
 			border: 1px solid #a3a3a3;

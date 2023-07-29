@@ -51,6 +51,8 @@
 		flex: 1;
 		cursor: pointer;
 
+		transition: all 0.2s ease-in-out;
+
 		.card-text {
 			display: flex;
 			flex-direction: column;
