@@ -40,10 +40,16 @@
 					}
 				];
 			});
+			ideas.sort(compare);
+			console.table(ideas);
 		});
 	});
 
 	let showModal: boolean = false;
+
+	const compare = (a: Idea, b: Idea) => {
+		return b.upvote - a.upvote;
+	};
 </script>
 
 <div class="wrapper">
