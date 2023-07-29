@@ -53,10 +53,10 @@
 			placeholder="A short description of your idea"
 		/>
 
-		<div>
+		<!-- <div>
 			<input bind:value={anonymous} type="checkbox" id="scales" name="Anonymous" />
 			<label for="Anonymous">Anonymous</label>
-		</div>
+		</div> -->
 		<button on:click={submitForm}>Submit</button>
 	</div>
 </dialog>

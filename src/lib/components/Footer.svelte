@@ -4,7 +4,7 @@
 			<div>
 				<h4>The Box</h4>
 				<p>
-					An online tool for sharing your ideas for the council of Intertots Trillingual School.
+					An online tool for sharing your opinion for the council of Intertots Trillingual School.
 				</p>
 			</div>
 			<div>
