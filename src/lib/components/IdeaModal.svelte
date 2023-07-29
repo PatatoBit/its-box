@@ -64,6 +64,10 @@
 		flex-direction: column;
 		gap: 0.5rem;
 
+		max-width: 50rem;
+		min-width: 30rem;
+		height: 25rem;
+
 		padding: 1rem;
 
 		input {
