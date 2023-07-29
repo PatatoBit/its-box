@@ -13,5 +13,10 @@ export const upVote = async (docId: string, userId: string) => {
 			upvote: increment(1),
 			upvoters: [...docSnap.upvoters, userId]
 		});
+	} else if (docSnap) {
+		await updateDoc(docRef, {
+			upvote: increment(-1),
+			upvoters: docSnap.upvoters.filter((upvoter: string) => upvoter !== userId)
+		});
 	}
 };
