@@ -17,7 +17,7 @@
 
 <main>
 	<img src="/cox.png" alt="Cat in a box" />
-	<h1 class="fancy title">ITS Box</h1>
+	<h1 class="fancy title">The Box</h1>
 	<div>
 		<button on:click={googleLogin}>Login</button>
 		<a href="/about">

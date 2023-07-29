@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<div class="wrapper">
 			<div>
-				<h4>The Box</h4>
+				<h4 class="fancy">The Box</h4>
 				<p>
 					An online tool for sharing your opinions for the council of Intertots Trillingual School.
 				</p>

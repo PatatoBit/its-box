@@ -3,7 +3,7 @@
 </head>
 
 <main class="wrapper">
-	<h1>About The Box</h1>
+	<h1>About <span class="fancy">The Box</span></h1>
 
 	<p>
 		This website is an online version of the opinion box. You can leave your ideas here and people
