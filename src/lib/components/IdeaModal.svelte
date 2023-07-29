@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { db } from '$lib/firebase';
 	import { addDoc, collection } from 'firebase/firestore';
+	import { userStore } from '../../store';
 
 	export let showModal: boolean;
 
@@ -17,8 +18,8 @@
 			title,
 			description,
 			anonymous,
-			upvote: 0,
-			upvoters: []
+			upvote: 1,
+			upvoters: [$userStore.uid]
 		});
 
 		console.log('Document written with ID: ', docRef.id);
