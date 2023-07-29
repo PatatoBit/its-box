@@ -24,8 +24,14 @@
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div class="modal" on:click|stopPropagation>
-		<h2>{title}</h2>
-		<p>{description}</p>
+		<div>
+			<h2>{title} 💡</h2>
+
+			<br />
+
+			<h3>Description</h3>
+			<p>{description}</p>
+		</div>
 
 		<div class="upvote-btn">
 			<label for="upvote">{upvote}</label>
@@ -38,6 +44,11 @@
 
 <style>
 	.modal {
+		max-width: 50rem;
+		min-width: 30rem;
+		height: 30rem;
+
+		justify-content: space-between;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
