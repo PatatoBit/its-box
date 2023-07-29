@@ -4,6 +4,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import Card from './Card.svelte';
 	import IdeaModal from './IdeaModal.svelte';
+	import type { Unsubscribe } from 'firebase/auth';
 
 	const logOut = () => {
 		auth.signOut().then(
@@ -26,9 +27,11 @@
 
 	let ideas: Idea[] = [];
 
+	let unsubscribe: Unsubscribe;
+
 	onMount(async () => {
 		const q = collection(db, 'ideas');
-		const unsubscribe = onSnapshot(q, (querySnapshot) => {
+		unsubscribe = onSnapshot(q, (querySnapshot) => {
 			ideas = [];
 			querySnapshot.forEach((doc) => {
 				ideas = [

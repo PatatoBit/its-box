@@ -16,8 +16,14 @@
 </script>
 
 <main>
+	<img src="/cox.png" alt="Cat in a box" />
 	<h1 class="fancy title">ITS Box</h1>
-	<button on:click={googleLogin}>Login</button>
+	<div>
+		<button on:click={googleLogin}>Login</button>
+		<a href="/about">
+			<button class="secondary"> About </button>
+		</a>
+	</div>
 </main>
 
 <style lang="scss">
@@ -27,5 +33,20 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	img {
+		width: 20rem;
+		height: auto;
+	}
+
+	.title {
+		font-size: 3rem;
+		margin-block: 1rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: #1e1e1e;
 	}
 </style>

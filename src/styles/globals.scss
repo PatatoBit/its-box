@@ -12,14 +12,13 @@ body {
 	font-family: 'Space Grotesk', 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
-.fancy {
-	font-family: 'Caveat', cursive;
-}
-
 h1,
 .title {
 	font-size: 32px;
-	font-weight: 700;
+	font-weight: 700 !important;
+}
+.fancy {
+	font-family: 'Caveat', cursive;
 }
 
 button {
@@ -62,5 +61,6 @@ button {
 .wrapper {
 	padding: 1rem;
 	max-width: 70rem;
+	min-height: 100vh;
 	margin-inline: auto;
 }
