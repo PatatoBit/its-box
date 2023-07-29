@@ -32,6 +32,7 @@
 		<li>Sharing ideas with your name / anonymously</li>
 		<li>Book voting</li>
 		<li>School Polls</li>
+		<li>Commenting</li>
 	</ul>
 
 	<br />

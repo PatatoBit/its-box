@@ -9,7 +9,7 @@
 <title>ITS Box</title>
 <meta
 	name="description"
-	content="An online tool for sharing your opinion for the student council of Intertots Trillingual School."
+	content="An online tool for sharing your opinions for the student council of Intertots Trillingual School."
 />
 
 <!-- Facebook Meta Tags -->
@@ -18,7 +18,7 @@
 <meta property="og:title" content="ITS Box" />
 <meta
 	property="og:description"
-	content="An online tool for sharing your opinion for the student council of Intertots Trillingual School."
+	content="An online tool for sharing your opinions for the student council of Intertots Trillingual School."
 />
 <meta property="og:image" content="/catbox.png" />
 
@@ -29,7 +29,7 @@
 <meta name="twitter:title" content="ITS Box" />
 <meta
 	name="twitter:description"
-	content="An online tool for sharing your opinion for the student council of Intertots Trillingual School."
+	content="An online tool for sharing your opinions for the student council of Intertots Trillingual School."
 />
 <meta name="twitter:image" content="/catbox.png" />
 
