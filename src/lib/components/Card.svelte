@@ -84,7 +84,7 @@
 
 		&:hover {
 			transition-duration: 0.2s;
-			transform: scale(1.14) !important;
+			transform: scale(1.04) !important;
 		}
 	}
 

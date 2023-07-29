@@ -69,15 +69,24 @@
 	<IdeaModal bind:showModal />
 
 	<div class="cards">
-		{#each ideas as idea (idea.docId)}
-			<Card
-				title={idea.title}
-				description={idea.description}
-				upvote={idea.upvote}
-				docId={idea.docId}
-				upvoters={idea.upvoters}
-			/>
-		{/each}
+		{#if ideas.length > 0}
+			{#each ideas as idea (idea.docId)}
+				<Card
+					title={idea.title}
+					description={idea.description}
+					upvote={idea.upvote}
+					docId={idea.docId}
+					upvoters={idea.upvoters}
+				/>
+			{/each}
+		{:else}
+			<!-- else content here -->
+
+			<div>
+				<h1>Hmm..</h1>
+				<p>Seems like there are no ideas yet!</p>
+			</div>
+		{/if}
 	</div>
 </div>
 

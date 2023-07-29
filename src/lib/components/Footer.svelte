@@ -15,7 +15,7 @@
 				<a href="/about">About</a>
 			</div>
 
-			<div><a href="https://github.com/patatobit/its-box">Source Code</a></div>
+			<div><a href="https://github.com/patatobit/its-box" target="_blank">Source Code</a></div>
 		</div>
 	</div>
 </footer>

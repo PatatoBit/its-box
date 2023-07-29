@@ -17,7 +17,7 @@
 
 	<p>
 		You can also see and contribute to this website's source code
-		<a href="https://github.com/patatobit/its-box">on Github</a>
+		<a href="https://github.com/patatobit/its-box" target="_blank">on Github</a>
 	</p>
 
 	<br />
@@ -35,10 +35,5 @@
 <style>
 	button {
 		margin-block: 1rem;
-	}
-
-	a {
-		text-decoration: none;
-		color: white;
 	}
 </style>
