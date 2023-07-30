@@ -69,7 +69,11 @@
 	<IdeaModal bind:showModal />
 
 	<div class="banner">
+		<img src="/graphics/pigeon.svg" alt="man" id="banner1" />
+		<img src="/graphics/sakura.svg" alt="flower" id="banner2" />
+
 		<strong class="fancy title">You matter, same as your opinion</strong>
+		<p>If you have an idea, you have to give it away. Otherwise, it dies.</p>
 	</div>
 
 	<div class="cards">
@@ -106,6 +110,40 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		position: relative;
+
+		overflow: hidden;
+
+		margin-bottom: 1rem;
+
+		strong,
+		p {
+			z-index: 10;
+		}
+
+		img {
+			position: absolute;
+			z-index: 0;
+		}
+
+		#banner1 {
+			width: 5rem;
+			top: 0;
+			right: 0;
+		}
+
+		#banner2 {
+			width: 10rem;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	@media only screen and (max-width: 800px) {
+		img {
+			opacity: 0.5;
+		}
 	}
 
 	.cards {
