@@ -11,6 +11,7 @@
 	export let title: string; // string
 	export let description: string;
 	export let upvote: number;
+	export let upvoters: string[];
 	export let docId: string;
 
 	export let userId: string;
@@ -35,14 +36,17 @@
 
 		<div class="upvote-btn">
 			<label for="upvote">{upvote}</label>
-			<button on:click={async () => await upVote(docId, userId)} class="upvote" id="upvote"
-				>👍</button
+			<button
+				on:click={async () => await upVote(docId, userId)}
+				class:activated={upvoters.includes(userId)}
+				class="upvote"
+				id="upvote">👍</button
 			>
 		</div>
 	</div>
 </dialog>
 
-<style>
+<style lang="scss">
 	.modal {
 		max-width: 50rem;
 		min-width: 20rem;
@@ -60,6 +64,10 @@
 		align-items: center;
 		gap: 0.4rem;
 		justify-content: flex-end;
+
+		.activated {
+			background-color: #72420e;
+		}
 	}
 
 	dialog {

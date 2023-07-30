@@ -39,57 +39,73 @@
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="form" on:click|stopPropagation>
-		<h2>Suggest an idea</h2>
-		<input bind:value={title} type="text" placeholder="Name of your idea" required />
-		<textarea
-			bind:value={description}
-			name="description"
-			id="description"
-			cols="30"
-			rows="10"
-			style="resize: none"
-			required
-			placeholder="A short description of your idea"
-		/>
+	<div on:click|stopPropagation>
+		<form class="idea-form">
+			<div>
+				<h2>Suggest an idea</h2>
 
-		<!-- <div>
-			<input bind:value={anonymous} type="checkbox" id="scales" name="Anonymous" />
-			<label for="Anonymous">Anonymous</label>
-		</div> -->
-		<button on:click={submitForm}>Submit</button>
+				<input bind:value={title} type="text" placeholder="Name of your idea" required />
+
+				<textarea
+					bind:value={description}
+					name="description"
+					id="description"
+					cols="30"
+					rows="10"
+					style="resize: none"
+					required
+					placeholder="A short description of your idea"
+				/>
+			</div>
+
+			<button on:click={submitForm}>Submit</button>
+		</form>
 	</div>
 </dialog>
 
 <style lang="scss">
-	.form {
+	.idea-form {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		gap: 0.5rem;
 
 		max-width: 50rem;
 		min-width: 20rem;
 		height: 25rem;
 
-		padding: 1rem;
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+		}
 
 		input {
 			padding: 0.5rem;
+			font-size: 18px;
 			border-radius: 0.25rem;
-			order: 1px solid #a3a3a3;
+			border: 1px solid #dadada;
+			&:focus {
+				border: 1px solid #dadada;
+			}
 
 			&::placeholder {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		}
 
 		textarea {
+			&:focus {
+				border: 1px solid #888888;
+			}
+
 			&::placeholder {
 				font-size: 16px;
 			}
+			font-size: 16px;
 			padding: 0.5rem;
 			border-radius: 0.25rem;
-			border: 1px solid #a3a3a3;
+			border: 1px solid #dadada;
 		}
 	}
 

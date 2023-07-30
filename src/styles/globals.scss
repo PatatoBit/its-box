@@ -3,6 +3,7 @@
 html,
 body {
 	overflow-x: hidden;
+	background-color: #f5dcc3;
 }
 
 * {
@@ -38,8 +39,9 @@ button {
 	}
 }
 .secondary {
-	background-color: #f3dec9;
-	color: black;
+	background-color: #fff4ea;
+
+	color: #72420e;
 }
 
 .upvote {
@@ -50,9 +52,8 @@ button {
 
 	border-radius: 100%;
 	aspect-ratio: 1/1;
-	padding: 0.2rem;
+	padding: 0.5rem;
 
-	&:hover,
 	.activated {
 		background-color: #72420e;
 	}

@@ -68,6 +68,10 @@
 
 	<IdeaModal bind:showModal />
 
+	<div class="banner">
+		<strong class="fancy title">You matter, same as your opinion</strong>
+	</div>
+
 	<div class="cards">
 		{#if ideas.length > 0}
 			{#each ideas as idea (idea.docId)}
@@ -93,6 +97,15 @@
 <style lang="scss">
 	button {
 		margin: 1rem 0;
+	}
+
+	.banner {
+		width: 100%;
+		height: 10rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.cards {

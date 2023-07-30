@@ -39,7 +39,7 @@
 	</div>
 </div>
 
-<CardModal {title} {description} {upvote} {docId} {userId} bind:showModal />
+<CardModal {title} {description} {upvote} {upvoters} {docId} {userId} bind:showModal />
 
 <style lang="scss">
 	.card {
