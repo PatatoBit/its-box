@@ -72,7 +72,7 @@
 		<img src="/graphics/pigeon.svg" alt="man" id="banner1" />
 		<img src="/graphics/sakura.svg" alt="flower" id="banner2" />
 
-		<strong class="fancy title">You matter, same as your opinion</strong>
+		<strong class="fancy title">Every idea matters</strong>
 		<p>If you have an idea, you have to give it away. Otherwise, it dies.</p>
 	</div>
 
