@@ -120,6 +120,7 @@
 		strong,
 		p {
 			z-index: 10;
+			text-align: center;
 		}
 
 		img {
@@ -142,7 +143,7 @@
 
 	@media only screen and (max-width: 800px) {
 		img {
-			opacity: 0.5;
+			opacity: 0.35;
 		}
 	}
 
