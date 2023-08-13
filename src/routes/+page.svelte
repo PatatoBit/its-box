@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 
 	import { userStore } from '../store';
+	import authStore from '$lib/authStore';
 
 	let isUser: boolean = false;
 	onMount(() => {

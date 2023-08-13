@@ -47,7 +47,7 @@
 		height: 10rem;
 		padding: 1rem;
 		color: #72420e;
-		background-color: #fff4ea;
+		background-color: #f5dcc3;
 		border: 1px solid #c19f7b;
 		border-radius: 0.75rem;
 		display: flex;
