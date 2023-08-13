@@ -3,7 +3,7 @@
 html,
 body {
 	overflow-x: hidden;
-	background-color: #fff4ea;
+	background-color: $background;
 }
 
 * {
@@ -26,7 +26,7 @@ button {
 	padding: 0.7rem 2rem;
 	border: none;
 	border-radius: 6px;
-	background-color: #ff8b15;
+	background-color: $primary;
 	color: white;
 	font-weight: 700;
 	font-size: 18px;
@@ -43,21 +43,21 @@ button {
 
 	color: #72420e;
 
-	border: 1.5px solid #72420e;
+	border: 1.5px solid $primary;
 }
 
 .upvote {
 	background: none;
 	border: none;
 	cursor: pointer;
-	border: 1px solid #72420e;
+	border: 1px solid $primary;
 
 	border-radius: 100%;
 	aspect-ratio: 1/1;
 	padding: 0.5rem;
 
 	.activated {
-		background-color: #72420e;
+		background-color: $primary;
 	}
 }
 

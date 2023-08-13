@@ -55,9 +55,9 @@
 		min-width: 15rem;
 		height: 10rem;
 
-		color: #72420e;
-		background-color: #f5dcc3;
-		border: 1px solid #c19f7b;
+		color: $text;
+		background-color: #d9e8fc;
+		border: 1px solid $primary;
 		border-radius: 0.75rem;
 		overflow: hidden;
 		cursor: pointer;
@@ -86,7 +86,7 @@
 			z-index: 1;
 		}
 		.activated {
-			background-color: #72420e;
+			background-color: $primary;
 		}
 
 		&:hover {
