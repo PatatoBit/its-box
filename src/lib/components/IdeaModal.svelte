@@ -121,7 +121,7 @@
 		top: 0;
 		bottom: 0;
 		margin: auto;
-		position: absolute;
+		position: fixed;
 	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.3);
