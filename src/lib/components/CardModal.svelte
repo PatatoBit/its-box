@@ -25,9 +25,9 @@
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div class="modal" on:click|stopPropagation>
-		<div>
+		<div class="modal-text">
 			<h2>{title}</h2>
-
+			<hr />
 			<p>{description}</p>
 		</div>
 
@@ -54,6 +54,17 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+	}
+
+	.modal-text {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		hr {
+			border: none;
+			border-bottom: 2px dashed $primary;
+		}
 	}
 
 	.upvote-btn {
