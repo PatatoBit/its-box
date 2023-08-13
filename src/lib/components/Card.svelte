@@ -43,19 +43,23 @@
 
 <style lang="scss">
 	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 1;
+		gap: 0.2rem;
+		padding: 1rem;
+
+		position: relative;
+
 		min-width: 15rem;
 		height: 10rem;
-		padding: 1rem;
+
 		color: #72420e;
 		background-color: #f5dcc3;
 		border: 1px solid #c19f7b;
 		border-radius: 0.75rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		gap: 0.2rem;
 		overflow: hidden;
-		flex: 1;
 		cursor: pointer;
 
 		transition: all 0.2s ease-in-out;
@@ -67,6 +71,9 @@
 		}
 
 		.upvote-btn {
+			position: absolute;
+			bottom: 0.5rem;
+			right: 0.5rem;
 			display: flex;
 			flex-direction: row;
 			justify-content: flex-end;
