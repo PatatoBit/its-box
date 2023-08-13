@@ -26,11 +26,8 @@
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div class="modal" on:click|stopPropagation>
 		<div>
-			<h2>{title} 💡</h2>
+			<h2>{title}</h2>
 
-			<br />
-
-			<h3>Description</h3>
 			<p>{description}</p>
 		</div>
 
@@ -48,9 +45,10 @@
 
 <style lang="scss">
 	.modal {
-		max-width: 50rem;
-		min-width: 20rem;
-		height: 30rem;
+		width: 100%;
+		height: 100%;
+
+		box-sizing: border-box;
 
 		justify-content: space-between;
 		display: flex;
@@ -66,15 +64,15 @@
 		justify-content: flex-end;
 
 		.activated {
-			background-color: #72420e;
+			background-color: $primary;
 		}
 	}
 
 	dialog {
-		max-width: 32em;
+		width: 60em;
+		height: 45em;
 		border-radius: 0.2em;
 		border: none;
-		padding: 0;
 
 		left: 0;
 		right: 0;
