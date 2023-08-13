@@ -39,9 +39,9 @@ button {
 	}
 }
 .secondary {
-	background-color: #fff4ea;
+	background-color: $background;
 
-	color: #72420e;
+	color: $primary;
 
 	border: 1.5px solid $primary;
 }

@@ -46,7 +46,7 @@
 <style lang="scss">
 	.modal {
 		width: 100%;
-		height: 100%;
+		height: 45rem;
 
 		box-sizing: border-box;
 
@@ -81,7 +81,7 @@
 
 	dialog {
 		width: 60em;
-		height: 45em;
+		min-height: 45em;
 		border-radius: 0.2em;
 		border: none;
 

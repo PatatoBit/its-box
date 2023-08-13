@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="upvote-btn">
-		<label for="upvote">{upvote}</label>
+		<label for="upvote"><strong>{upvote}<strong /></strong></label>
 		<button
 			on:click={async () => await upVote(docId, userId)}
 			class="upvote"
@@ -79,6 +79,7 @@
 			justify-content: flex-end;
 			align-items: center;
 			gap: 0.4rem;
+			background-color: #d9e8fc;
 		}
 
 		.upvote {
